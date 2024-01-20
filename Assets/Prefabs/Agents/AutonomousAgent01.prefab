@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 9156816749885092494}
   - component: {fileID: 2004305106302624906}
   - component: {fileID: 9062300574537105128}
+  - component: {fileID: -2045683895427472695}
   - component: {fileID: 9067268218206339644}
   - component: {fileID: 2110407030159185190}
   m_Layer: 0
@@ -248,7 +249,7 @@ Transform:
   m_GameObject: {fileID: 1270321641709027982}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.012, y: 0, z: 0}
+  m_LocalPosition: {x: 0.01, y: 0, z: -0.013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -271,6 +272,7 @@ MonoBehaviour:
   seekPerception: {fileID: 2004305106302624906}
   fleePerception: {fileID: 0}
   flockPerception: {fileID: 9062300574537105128}
+  obstaclePerception: {fileID: -2045683895427472695}
 --- !u!114 &9156816749885092494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,6 +304,9 @@ MonoBehaviour:
   tagName: Agent02
   distance: 5
   maxAngle: 60
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &9062300574537105128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,6 +322,29 @@ MonoBehaviour:
   tagName: Agent01
   distance: 5
   maxAngle: 240
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &-2045683895427472695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270321641709027982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 807ce8c8eafe3eb469cf1f019ca12887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: 
+  distance: 5
+  maxAngle: 80
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  numRaycast: 11
+  radius: 0.5
 --- !u!135 &9067268218206339644
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -336,8 +364,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.26751447
-  m_Center: {x: 0.22999996, y: 0.14473891, z: -0.36722517}
+  m_Radius: 0.2
+  m_Center: {x: 0.3, y: 0.28, z: -0.35}
 --- !u!54 &2110407030159185190
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -346,7 +374,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270321641709027982}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
