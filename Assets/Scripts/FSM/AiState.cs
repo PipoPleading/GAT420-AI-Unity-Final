@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class AIState : AIAgent
+public abstract class AIState
 {
     protected AIStateAgent agent;
 

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AIHitState : AIState
 {
-    float timer = 0;
     public AIHitState(AIStateAgent agent) : base(agent) 
     {
         AIStateTransition transition = new AIStateTransition(nameof(AIIdleState));

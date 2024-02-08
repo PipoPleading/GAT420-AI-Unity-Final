@@ -45,7 +45,7 @@ public class AIStateAgent : AIAgent
         if(enemySeen)
         {
             enemy = enemies[0].TryGetComponent(out AIStateAgent stateAgent) ? stateAgent : null;
-            enemyDistance.value = Vector3.Distance(transform.position, enemy.transform.position);
+            enemyDistance.value = Vector3.Distance(transform.position, enemy.transform.position);// check later
             enemyHealth.value = enemy.health;
         }
 

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AIAttackState : AIState
 {
-    float timer = 0;
     public AIAttackState(AIStateAgent agent) : base(agent) 
     {
         AIStateTransition transition = new AIStateTransition(nameof(AIChaseState));

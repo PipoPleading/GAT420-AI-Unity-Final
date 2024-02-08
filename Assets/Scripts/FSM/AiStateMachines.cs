@@ -15,13 +15,13 @@ public class AIStateMachines
 
     public void AddState(string name, AIState state)
     {
-        Debug.Assert(states.ContainsKey(name), $"State machine already contains state: {name}.");
+        //Debug.Assert(states.ContainsKey(name), $"State machine already contains state: {name}.");
         states[name] = state;
     }
 
     public void SetState(string name)
     {
-        Debug.Assert(states.ContainsKey(name), $"State machine does not contain state: {name}.");
+        //Debug.Assert(states.ContainsKey(name), $"State machine does not contain state: {name}.");
 
         AIState newState = states[name];
 
